@@ -3,8 +3,8 @@
 
 
 #include <string>
-#include <cstdint>
 #include <iostream>
+#include <stdint.h> //lib de 98
 
 struct Data {
     int id;

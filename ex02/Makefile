@@ -1,6 +1,6 @@
-NAME = serialization
+NAME = identify
 
-SRC = main.cpp Serializer.cpp
+SRC = main.cpp 
 
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/,$(SRC:.cpp=.o))
@@ -28,6 +28,6 @@ re: fclean all
 
 run:
 	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes \
-	./serialization
+	./identify
 
 .PHONY: all clean fclean re
