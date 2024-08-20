@@ -6,6 +6,7 @@ int main (int argc, char **argv) {
         return 1;
     }
     ScalarConverter::convert(argv[1]);
+    std::cout << "\n"; /////  dar ocome
     return 0;
 }
 

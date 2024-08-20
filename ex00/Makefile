@@ -28,6 +28,6 @@ re: fclean all
 
 run:
 	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes \
-	./convert 2147483647
+	./convert 6516516515161.1
 
 .PHONY: all clean fclean re

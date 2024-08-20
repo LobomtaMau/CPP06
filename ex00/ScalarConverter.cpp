@@ -87,9 +87,9 @@ void ScalarConverter::printInt(const std::string &literal) {
 
 void ScalarConverter::printFloat(const std::string &literal) {
     float value = std::strtof(literal.c_str(), NULL);
-    if (value > std::numeric_limits<float>::max() || value < -std::numeric_limits<float>::max())
-        std::cout << "float: impossible\n";
-    else {
+    // if (value > std::numeric_limits<float>::max() || value < -std::numeric_limits<float>::max())
+    //     std::cout << "float: impossible\n";
+    if (value) {
         std::cout << "char: ";
         if (std::isnan(value) || std::isinf(value) || value < 0 || value > 127)
             std::cout << "impossible\n";
@@ -105,13 +105,14 @@ void ScalarConverter::printFloat(const std::string &literal) {
         std::cout << "float: " << value << "f\n";
         std::cout << "double: " << static_cast<double>(value) << "\n";
     }
+    
 }
 
 void ScalarConverter::printDouble(const std::string &literal) {
     double value = std::strtod(literal.c_str(), NULL);
-    if (value > std::numeric_limits<double>::max() || value < -std::numeric_limits<double>::max())
-        std::cout << "double: impossible\n";
-    else {
+    // if (value > std::numeric_limits<double>::max() || value < -std::numeric_limits<double>::max())
+    //     std::cout << "double: impossible\n";
+    if (value) {
         std::cout << "char: ";
         if (std::isnan(value) || std::isinf(value) || value < 0 || value > 127)
             std::cout << "impossible\n";
